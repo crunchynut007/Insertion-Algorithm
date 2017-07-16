@@ -11,16 +11,14 @@ namespace TestApp1
 	{
 		static void Main(string[] args)
 		{
-			int[] A = { 5, 2, 13, 4, 6, 1, 3, 7, 12, 9, 8 };
+			int[] A = { 5, 2, 13, 4, 6, 1, 10, 21, 3, 7, 12, 9, 8, 1, 4, 7};
 			StringBuilder sb = new StringBuilder();
 			Aconsolewriter(A, sb);
 
-			for (int i = 0, j = 1; j < A.Length; j++)
-			{
+			for (int i = 0, j = 1; j < A.Length; j++) {
 				int key = A[j];
 				i = j - 1;
-				while (i >= 0 && A[i] > key)
-				{
+				while (i >= 0 && A[i] > key) {
 					A[i + 1] = A[i];
 					i -= 1;
 				}
@@ -31,10 +29,8 @@ namespace TestApp1
 			Console.ReadLine();
 		}
 
-		public static void Aconsolewriter(int[] B, StringBuilder SB)
-		{
-			for (int x = 0; x < (B.Length); x++)
-			{
+		public static void Aconsolewriter(int[] B, StringBuilder SB) {
+			for (int x = 0; x < (B.Length); x++) {
 				SB.Append(B[x].ToString() + " ");
 			}
 			SB.AppendLine();
