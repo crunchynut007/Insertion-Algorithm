@@ -8,7 +8,7 @@ namespace TestApp1
 	{
 		static void Main(string[] args)
 		{
-			int[] A = { 5, 2, 13, 4, 6, 1, 10, 21, 3, 7, 12, 9, 8, 1, 4, 7};
+			int[] A = { 5, 2, 6, 4, 6, 1, 10, 9, 3, 7, 12, 9, 8, 1, 4, 7, 11, 1};
 			StringBuilder sb = new StringBuilder();
 			Aconsolewriter(A, sb);
 
