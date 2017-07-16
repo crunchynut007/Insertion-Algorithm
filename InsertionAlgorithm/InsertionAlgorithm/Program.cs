@@ -17,8 +17,10 @@ namespace TestApp1
 			 * 'j' is the current index we are at in the loop where the value is stored and held in the 'key'. 
 			 * 'i' is our previous index that is tested against. 
 			 * i decreases till 0 (-1 since index 0 is valid) or less than j value (key)
-			 * i value keeps swapping places with i+1 value before decrement until i gets towards start of array or till lower than key value.
-			 * j value (key) gets assigned to index of i once A[i] > key where i+1 is correct index */
+			 * i value keeps swapping places with i+1 value before decrement until i gets towards start 
+			 * of array or till lower than key value.
+			 * j value (key) gets assigned to index of i once A[i] > key where i+1 is correct index since 
+			 * the latest decrement ended the while loop - satisfying conditions */
 
 			for (int i = 0, j = 1; j < A.Length; j++) {
 				int key = A[j];
