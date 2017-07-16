@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using System.IO;
+
 
 namespace TestApp1
 {
@@ -24,14 +21,19 @@ namespace TestApp1
 				}
 				A[i + 1] = key;
 
-				Aconsolewriter(A, sb);
+				Aconsolewriter(A, sb, j);
 			}
 			Console.ReadLine();
 		}
 
-		public static void Aconsolewriter(int[] B, StringBuilder SB) {
+		public static void Aconsolewriter(int[] B, StringBuilder SB, int currentindex = 0) {
 			for (int x = 0; x < (B.Length); x++) {
-				SB.Append(B[x].ToString() + " ");
+				if (currentindex > 0 && x == currentindex) {
+					SB.Append("|").Append(B[x].ToString()).Append("| ");
+				}
+				else {
+					SB.Append(B[x].ToString() + " ");
+				}
 			}
 			SB.AppendLine();
 			Console.WriteLine(SB.ToString());
